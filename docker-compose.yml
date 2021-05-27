@@ -1,0 +1,17 @@
+version: '3'
+services:
+    roadrunner:
+      build: .
+      image: test
+      user: $UID:$GID
+      working_dir: /home/dockeruser
+      stdin_open: true
+      volumes:
+        - /Users/faisal/Dropbox/coding:/home/dockeruser/coding:rw
+      tty: true
+      ports: 
+        - "8888:8888"
+      group_add:
+        - "1010"
+      environment:
+        - HOME="/home/dockeruser"
