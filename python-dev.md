@@ -132,7 +132,7 @@ Dockerfile to setting up an image with a `dockeruser` user.  The user has a home
 FROM ubuntu:latest
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get -y update
+RUN apt-get update && apt-get -y upgrade
 
 RUN apt-get install sqlite3 -y
 
@@ -198,7 +198,7 @@ $ docker build -t test .
 ~~~bash  
 $ export UID=$(id -u $USER)
 $ export GID=$(id -g $USER)
-$ docker-compose -f docker-compose.yml roadrunner 
+$ docker-compose -f docker-compose.yml up roadrunner 
 ...
 Attaching to docker-test2_roadrunner_1
 ~~~
