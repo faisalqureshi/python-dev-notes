@@ -5,7 +5,7 @@ author: Faisal Z. Qureshi
 email: faisal.qureshi@ontariotechu.ca
 date: May 19, 2021
 institution: Ontario Tech University
-subtitle: Local and remote setups
+subtitle: Setting up GIT for iPython Notebooks
 institute: Ontario Tech University
 sansfont: Gill Sans
 titlegraphic: ontario-tech-univ-logo.png
@@ -73,7 +73,7 @@ $ ~/.local/bin/nbstripout install
 
 ## Step 4: Start coding.
 
-Check out [here](python-dev.html) for some ideas on how to do Python development using Docker or on remote machines.
+Check out [here](python-dev.html) for some ideas on how to do Python development using Docker on remote machines.
 
 
 *Happy hacking!*
