@@ -2,7 +2,7 @@ version: '3'
 services:
     charlie:
       build: .
-      image: qureshi/ml:1.3
+      image: qureshi/ml
       user: $user_id:$group_id
       working_dir: /home/dockeruser
       stdin_open: true
@@ -10,7 +10,7 @@ services:
         - /home/faisal/code/ml:/home/dockeruser/ml:rw
       tty: true
       ports: 
-        - "11945:8888"
+        - "8888:8888"
       group_add:
         - "1010"
       environment:

@@ -2,12 +2,12 @@ version: '3'
 services:
     rr:
       build: .
-      image: qureshi/axiom-analytics
+      image: qureshi/sqlite3
       user: $user_id:$group_id
       working_dir: /home/dockeruser
       stdin_open: true
       volumes:
-        - /home/faisal/code/axiom-analytics:/home/dockeruser/axiom:rw
+        - /home/faisal/code/sqlite3:/home/dockeruser/sqlite3:rw
       tty: true
       ports: 
         - "8888:8888"

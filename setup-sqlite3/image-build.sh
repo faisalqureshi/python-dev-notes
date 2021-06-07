@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t qureshi/axiom-analytics .
+docker build -t qureshi/sqlite3 .

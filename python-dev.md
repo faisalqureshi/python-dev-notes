@@ -1,4 +1,4 @@
----
+<!-- ---
 to: html
 title: Python development
 author: Faisal Z. Qureshi   
@@ -16,8 +16,8 @@ highlight: kate
 css: "notes-style.css"
 template: "notes-template.html"
 
----
-# Introduction
+--- -->
+# System setup for Python-based development
 
 This document provides recipies for setting up local or remote Python (and Jupyter notebook) development environments.  
 

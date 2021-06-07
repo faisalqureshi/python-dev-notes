@@ -1,4 +1,4 @@
----
+<!-- ---
 to: html
 title: Setting docker for ML
 author: Faisal Z. Qureshi   
@@ -16,7 +16,9 @@ highlight: kate
 css: "notes-style.css"
 template: "notes-template.html"
 
----
+--- -->
+
+# Setting up docker for ML 
 
 Machine Learning (ML) requires access to serious computing hardware, most notably Graphical Processing Units (GPUs) capable of crunching vast amount of data in order to train complicated deep (learning) neural networks models.  NVidia is currently the dominant GPU provider on the market.  A large fraction of deep learning models rely upon NVidia GPUs.  Before we setup a docker environment that has access to GPUs available on the host machine, lets ensure that the following works.  To keep things simple, lets assume that you are using a Linux system.
 

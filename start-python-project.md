@@ -1,4 +1,4 @@
----
+<!-- ---
 to: html
 title: Starting a Python Project 
 author: Faisal Z. Qureshi   
@@ -16,8 +16,8 @@ highlight: kate
 css: "notes-style.css"
 template: "notes-template.html"
 
----
-# Introduction
+--- -->
+# Starting a Python project
 
 This document lists steps that I follow when starting a new Python project.
 
@@ -74,6 +74,5 @@ $ ~/.local/bin/nbstripout install
 ## Step 4: Start coding.
 
 Check out [here](python-dev.html) for some ideas on how to do Python development using Docker on remote machines.
-
 
 *Happy hacking!*

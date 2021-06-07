@@ -7,7 +7,7 @@
 *1.* Build docker 
 
 ~~~
-docker build -t qureshi/sqlite3 .
+docker build -t qureshi/ml .
 ~~~
 
 This can be achieved by running the script `image-build.sh`.
@@ -15,7 +15,7 @@ This can be achieved by running the script `image-build.sh`.
 Note this line 
 
 ~~~txt
-Successfully tagged qureshi/sqlite3:latest
+Successfully tagged qureshi/ml:latest
 ~~~
 
 which identifies that the image has been successfully built.  You'll need image tag to run the container.
@@ -45,7 +45,7 @@ This can be achieved by running the script `container-run.sh`.
 Note this line
 
 ~~~txt
-Attaching to setup-sqlite3_rr_1
+Attaching to setup-ml_charlie_1
 ~~~
 
 that identifies the container tag.  You'll need this to attach to this container.
@@ -53,7 +53,7 @@ that identifies the container tag.  You'll need this to attach to this container
 *4.* Attach to this container
 
 ~~~
-docker exec -it setup-sqlite3_rr_1 bash
+docker exec -it setup-ml_rr_1 bash
 ~~~
 
 This can be achieved by running the script `container-attach.sh`.
