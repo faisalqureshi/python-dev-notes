@@ -1,0 +1,17 @@
+version: '3'
+services:
+    rr:
+      build: .
+      image: qureshi/axiom-analytics
+      user: $user_id:$group_id
+      working_dir: /home/dockeruser
+      stdin_open: true
+      volumes:
+        - /home/faisal/code/axiom-analytics:/home/dockeruser/axiom:rw
+      tty: true
+      ports: 
+        - "8888:8888"
+      group_add:
+        - "1010"
+      environment:
+        - HOME="/home/dockeruser"

@@ -1,0 +1,12 @@
+jupyterlab==3.0.15
+numpy==1.20.3
+scipy==1.6.3
+matplotlib==3.4.2
+pandas==1.2.4
+xlrd==2.0.1
+openpyxl==3.0.7
+SQLAlchemy==1.4.15
+Flask==2.0.1
+plotly==4.14.3
+scikit-learn
+tables
