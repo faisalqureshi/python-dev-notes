@@ -1,6 +1,6 @@
 <!-- ---
 to: html
-title: Setting docker for ML
+title: Docker setup for ML 
 author: Faisal Z. Qureshi   
 email: faisal.qureshi@ontariotechu.ca
 date: May 19, 2021
