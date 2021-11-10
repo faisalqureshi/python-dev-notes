@@ -1,5 +1,10 @@
 FROM ubuntu:latest
 
+LABEL description="Setting a development Docker container.  Docker compose file maps dockeruser seen here to the current user on the host, greatly simplifying code development by side-stepping prickly permission issues."
+LABEL author="Faisal Qureshi"
+LABEL contact="faisal.qureshi@ontariotechu.ca"
+
+
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y update
 

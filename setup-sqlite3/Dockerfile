@@ -1,5 +1,9 @@
 FROM ubuntu:latest
 
+LABEL description="A container for sqlite."
+LABEL author="Faisal Qureshi"
+LABEL contact="faisal.qureshi@ontariotechu.ca"
+
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y update
 

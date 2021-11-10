@@ -1,5 +1,10 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 
+LABEL description="Use nvidia/cuda image to support cuda-powered frameworks, such as PyTorch, within the container."
+LABEL author="Faisal Qureshi"
+LABEL contact="faisal.qureshi@ontariotechu.ca"
+
+
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y upgrade
 
