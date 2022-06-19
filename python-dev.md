@@ -292,11 +292,30 @@ Soon you will outgrow your local machine, and you will need access to developmen
 
 ### Accessing jupyter notebook on the remote server
 
-1. Start the jupyter notebook on the remote server.  If using virtualenv, you can do the following: `jupyter notebook --port 8888 --no-browser`.  Be sure to write down the URL with authentication token.
+1. Start the jupyter notebook on the remote server.  If using virtualenv, you can do the following: `jupyter notebook --port=8888 --no-browser`.  Be sure to write down the URL with authentication token.
 
-2. Set up an ssh tunnel to the remote server: `ssh user@remote -NL 8888:localhost:8888`.  This will forward local port 8888 to remote port 8888.
+  - `--no-browser` starts notebook without opening the browser.
+  - `--port` sets the port for this notebook.  The default is `8888`.
+
+2. Set up an ssh tunnel to the remote server: `ssh user@remote -N -f -L localhost:8889:localhost:8888`.  This will forward local port 8889 to remote port 8888.
+
+  - `-N` suppresses execution of remote command.
+  - `-f` this ssh requests goes to background before execution.  If you use `-f` then you need `sudo netstat -lpn |grep :8889` to find the ssh process to kill it.  I often do not use `-f` flag.  Then I can simply `CTRL+C` this ssh.
+  - `-L` specifies port mapping as `localport:remoteport`. `localport` takes the form `localhost:8889` and `remoteport` takes the form `localhost:8888`.  This would map remote port `8888` to local port `8889` 
 
 3. Use the authentication token in (1) above, connect to the jupyter notebook at the remote host.
+
+#### Replacing step 2 via `.sshconfig` file
+
+Add the following entry
+
+```bash
+Host notebooks
+HostName remote
+User user
+LocalForward 8889 localhost:8888
+IdentityFile ...
+```
 
 ### Editing files on remote host
 
